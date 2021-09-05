@@ -8,5 +8,6 @@ namespace Data.ApplicationModels
 {
     public class ApplicationUser : IdentityUser<int>
     {
+        public string racxa { get; set; }
     }
 }

@@ -12,8 +12,8 @@ namespace MVC.Controllers
     [AllowAnonymous]                                                                       
     public class AccountController : Controller                                            
     {                                                                                      
-        private readonly SignInManager<ApplicationUser> _signInManager;                    
-        private readonly UserManager<ApplicationUser> _userManager;                        
+        private SignInManager<ApplicationUser> _signInManager;                    
+        private UserManager<ApplicationUser> _userManager;                        
                                                                                            
         public AccountController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager)
         {                                                                                  

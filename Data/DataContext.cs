@@ -20,7 +20,13 @@ namespace Data
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-B3Q553I;Initial Catalog=WebAppDatabase;Integrated Security=True");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-B3Q553I;Initial Catalog=WebAppDatabase;Integrated Security=True");
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+            builder.Entity<ApplicationRole>().Property(x => x.Id).ValueGeneratedOnAdd();
         }
     }
 }

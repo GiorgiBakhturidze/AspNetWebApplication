@@ -22,9 +22,7 @@ namespace Data.Migrations
             modelBuilder.Entity("Data.ApplicationModels.ApplicationRole", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -101,6 +99,9 @@ namespace Data.Migrations
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("racxa")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
